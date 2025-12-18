@@ -12,17 +12,13 @@ let getJohnProfile = () => {
   });
 };
 // Start coding here
-getJohnProfile = async () => {
-  return await new Promise(function (_, reject) {
-    setTimeout(
-      () =>
-        reject({
-          errorCode: 500,
-          message: "👿 Failed to request data from server",
-        }),
-      2000
-    );
-  });
+async function asynchronous () {
+  try {
+    let john = await getJohnProfile();
+    console.log(john);
+  } catch (error) {
+    console.log(error)
+  }
 };
 
-getJohnProfile().catch(console.log)
+asynchronous();

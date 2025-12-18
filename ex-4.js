@@ -13,18 +13,9 @@ let getJohnProfile = () => {
   });
 };
 // Start coding here
-getJohnProfile = async () => {
-  return await new Promise(function (resolve) {
-    setTimeout(
-      () =>
-        resolve({
-          name: "John",
-          age: 20,
-          hobbies: ["Coding", "Football"],
-        }),
-      1000
-    );
-  });
+async function asynchronous () {
+  let john = await getJohnProfile();
+  console.log(john);
 };
 
-getJohnProfile().then(console.log);
+asynchronous();

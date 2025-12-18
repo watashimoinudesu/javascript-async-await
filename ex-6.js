@@ -35,10 +35,12 @@ let getJohnOrders = () => {
 // Start coding here
 async function asynchronous() {
   try{
-    await getJohnProfile().then(console.log)
-    await getJohnOrders().then(console.log)
+    let johnProfile = await getJohnProfile();
+    console.log(johnProfile);
+    let johnOrders = await getJohnOrders();
+    console.log(johnOrders);
   } catch (err){
-    console.log("URL Error")
+    console.log(err)
   }
 };
 
