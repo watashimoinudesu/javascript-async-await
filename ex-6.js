@@ -33,3 +33,13 @@ let getJohnOrders = () => {
 };
 
 // Start coding here
+async function asynchronous() {
+  try{
+    await getJohnProfile().then(console.log)
+    await getJohnOrders().then(console.log)
+  } catch (err){
+    console.log("URL Error")
+  }
+};
+
+asynchronous();
